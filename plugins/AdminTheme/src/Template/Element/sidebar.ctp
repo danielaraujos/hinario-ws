@@ -11,9 +11,9 @@
             );
             ?>
 
-            <?= $this->Menu->treeView('fa fa-tags', 'Cifras ', 'Hinos', [
-                    ['Adicionar hinos', 'add'],
-                    ['Gerenciar hinos', 'index'],
+            <?= $this->Menu->treeView('fa fa-tags', 'Cifras ', 'Cifras', [
+                    ['Adicionar cifras', 'add'],
+                    ['Gerenciar cifras', 'index'],
                 ]
             );
             ?>

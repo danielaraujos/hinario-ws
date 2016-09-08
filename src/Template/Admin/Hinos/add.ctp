@@ -6,13 +6,13 @@
     <?= $this->Form->create($hino) ?>
         <div class="box-body">
 			<div class="form-group">
-				<?= $this->Form->input('name', ['class' => 'form-control', 'placeholder' => '']) ?>
+				<?= $this->Form->input('name', ['label'=>'Titulo do Hino','class' => 'form-control', 'placeholder' => '']) ?>
 			</div>
 			<div class="form-group">
-				<?= $this->Form->input('body', ['class' => 'form-control', 'placeholder' => '']) ?>
+				<?= $this->Form->input('body', ['label'=>'Conteudo','class' => 'form-control', 'placeholder' => '']) ?>
 			</div>
 			<div class="form-group">
-				<?= $this->Form->input('indices_id', ['class' => 'form-control', 'placeholder' => '', 'options' => $indices]) ?>
+				<?= $this->Form->input('indices_id', ['label'=>'Tipo do hino','class' => 'form-control', 'placeholder' => '', 'options' => $indices]) ?>
             </div>
     </div><!-- /.box-body -->
     <div class="box-footer">

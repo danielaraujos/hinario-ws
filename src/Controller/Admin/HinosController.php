@@ -32,22 +32,6 @@ class HinosController extends AppController
         $this->set('_serialize', ['hinos']);
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id Hino id.
-     * @return \Cake\Network\Response|null
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $hino = $this->Hinos->get($id, [
-            'contain' => ['Indices']
-        ]);
-
-        $this->set('hino', $hino);
-        $this->set('_serialize', ['hino']);
-    }
 
     /**
      * Add method
