@@ -1,15 +1,30 @@
 <?php
 use Migrations\AbstractMigration;
 
-class Inicial extends AbstractMigration
+class Bd extends AbstractMigration
 {
     public function up()
     {
 
-        $this->table('autores')
+        $this->table('cifras')
             ->addColumn('name', 'string', [
                 'default' => null,
-                'limit' => 100,
+                'limit' => 200,
+                'null' => false,
+            ])
+            ->addColumn('body', 'text', [
+                'default' => null,
+                'limit' => null,
+                'null' => false,
+            ])
+            ->addColumn('tone', 'string', [
+                'default' => null,
+                'limit' => 10,
+                'null' => false,
+            ])
+            ->addColumn('compass', 'string', [
+                'default' => null,
+                'limit' => 20,
                 'null' => false,
             ])
             ->create();
@@ -23,11 +38,6 @@ class Inicial extends AbstractMigration
             ->addColumn('body', 'text', [
                 'default' => null,
                 'limit' => null,
-                'null' => false,
-            ])
-            ->addColumn('autores_id', 'integer', [
-                'default' => null,
-                'limit' => 11,
                 'null' => false,
             ])
             ->addColumn('indices_id', 'integer', [
@@ -71,7 +81,7 @@ class Inicial extends AbstractMigration
 
     public function down()
     {
-        $this->dropTable('autores');
+        $this->dropTable('cifras');
         $this->dropTable('hinos');
         $this->dropTable('indices');
         $this->dropTable('users');

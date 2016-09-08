@@ -23,7 +23,7 @@ class HinosController extends AppController
 		
         $this->paginate = [
             'limit'=>20,
-            //'contain' => ['Indices']
+            'contain' => ['Indices']
         ];
         $hinos = $this->paginate($this->Hinos);
 

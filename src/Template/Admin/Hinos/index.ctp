@@ -12,8 +12,7 @@
 						<th><?= $this->Paginator->sort('id') ?></th>
 						<th><?= $this->Paginator->sort('name') ?></th>
 						<th><?= $this->Paginator->sort('indices_id') ?></th>
-						<th>Editar</th>
-						<th>Deletar</th>
+						<th>Ações</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -22,10 +21,12 @@
 						<td><?= $this->Number->format($hino->id) ?></td>
 						<td><?= $hino->name ?></td>
 						<td><?= $hino->has('index') ? $this->Html->link($hino->index->name, ['controller' => 'Indices', 'action' => 'view', $hino->index->id]) : '' ?></td>
-						<td><?= $this->Html->link('Editar', ['action' => 'edit', $hino->id]) ?></td>
-						<td><?= $this->Form->postLink('Deletar', 
+						<td></td>
+						<td>
+							<?= $this->Html->link('Editar', ['action' => 'edit', $hino->id],['class'=> 'btn btn-primary btn-sm']) ?>
+							<?= $this->Form->postLink('Deletar',
 							['action' => 'delete', $hino->id], 
-							['confirm' => __('Tem certeza que deseja deletar o(a) hino {0}?', $hino->id)]) ?>
+							['confirm' => __('Tem certeza que deseja deletar o(a) hino {0}?', $hino->id),'class'=> 'btn btn-danger btn-sm']) ?>
 						</td>
 					</tr>
                 <?php endforeach; ?>

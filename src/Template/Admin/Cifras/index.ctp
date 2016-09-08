@@ -13,7 +13,7 @@
 						<th>Titulo</th>
 						<th>Tonalidade</th>
 						<th>Compasso</th>
-						<th>Ação</th>
+						<th>Ações</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -25,7 +25,6 @@
 						<td><?= $cifra->compass ?></td>
 						<td>
 							<?= $this->Html->link('Editar', ['action' => 'edit', $cifra->id],['class'=> 'btn btn-primary btn-sm']) ?>
-
 							<?= $this->Form->postLink('Deletar',
 							['action' => 'delete', $cifra->id], 
 							['confirm' => __('Tem certeza que deseja deletar o(a) cifra {0}?', $cifra->name),'class'=> 'btn btn-danger btn-sm']) ?>
