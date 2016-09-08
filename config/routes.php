@@ -46,7 +46,6 @@ Router::scope('/api/v1', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'index']);
     $routes->extensions(['Json']);
     $routes->resources('Hinos');
-    $routes->resources('Autores');
     $routes->resources('Indices');
 
     $routes->fallbacks('DashedRoute');

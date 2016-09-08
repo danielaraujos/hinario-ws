@@ -37,10 +37,7 @@ class HinosTable extends Table
         $this->displayField('name');
         $this->primaryKey('id');
 
-        $this->belongsTo('Autores', [
-            'foreignKey' => 'autores_id',
-            'joinType' => 'INNER'
-        ]);
+
         $this->belongsTo('Indices', [
             'foreignKey' => 'indices_id',
             'joinType' => 'INNER'
@@ -79,7 +76,6 @@ class HinosTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['autores_id'], 'Autores'));
         $rules->add($rules->existsIn(['indices_id'], 'Indices'));
         return $rules;
     }

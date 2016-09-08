@@ -4,19 +4,20 @@
 
             <?= $this->Menu->item('fa fa-dashboard', 'Welcome', 'Welcome'); ?>
 
-            <?= $this->Menu->treeView('fa fa-tags', 'Hinos', 'Hinos', [
+            <?= $this->Menu->treeView('fa fa-tags', 'Letras ', 'Hinos', [
                     ['Adicionar hinos', 'add'],
                     ['Gerenciar hinos', 'index'],
                 ]
             );
             ?>
 
-            <?= $this->Menu->treeView('fa fa-tags', 'Autores', 'Autores', [
-                    ['Adicionar autores', 'add'],
-                    ['Gerenciar autores', 'index'],
+            <?= $this->Menu->treeView('fa fa-tags', 'Cifras ', 'Hinos', [
+                    ['Adicionar hinos', 'add'],
+                    ['Gerenciar hinos', 'index'],
                 ]
             );
             ?>
+
 
             <?= $this->Menu->treeView('fa fa-tags', 'Indices', 'Indices', [
                     ['Adicionar indices', 'add'],

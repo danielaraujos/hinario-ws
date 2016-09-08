@@ -23,7 +23,7 @@ class HinosController extends AppController
 		
         $this->paginate = [
             'limit'=>20,
-            //'contain' => ['Autores', 'Indices']
+            //'contain' => ['Indices']
         ];
         $hinos = $this->paginate($this->Hinos);
 
@@ -42,7 +42,7 @@ class HinosController extends AppController
     public function view($id = null)
     {
         $hino = $this->Hinos->get($id, [
-            'contain' => ['Autores', 'Indices']
+            'contain' => ['Indices']
         ]);
 
         $this->set('hino', $hino);
@@ -69,9 +69,9 @@ class HinosController extends AppController
                 $this->Flash->error(__('Não foi possivel salvar hino. Por favor, tente novamente.'));
             }
         }
-        $autores = $this->Hinos->Autores->find('list', ['limit' => 200]);
+
         $indices = $this->Hinos->Indices->find('list', ['limit' => 200]);
-        $this->set(compact('hino', 'autores', 'indices'));
+        $this->set(compact('hino', 'indices'));
         $this->set('_serialize', ['hino']);
     }
 
@@ -99,9 +99,8 @@ class HinosController extends AppController
                 $this->Flash->error(__('Falha ao editar hino. Por favor, tente novamente.'));
             }
         }
-        $autores = $this->Hinos->Autores->find('list', ['limit' => 200]);
         $indices = $this->Hinos->Indices->find('list', ['limit' => 200]);
-        $this->set(compact('hino', 'autores', 'indices'));
+        $this->set(compact('hino',  'indices'));
         $this->set('_serialize', ['hino']);
     }
 

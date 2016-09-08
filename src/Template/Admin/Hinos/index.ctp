@@ -11,7 +11,6 @@
 					<tr>
 						<th><?= $this->Paginator->sort('id') ?></th>
 						<th><?= $this->Paginator->sort('name') ?></th>
-						<th><?= $this->Paginator->sort('autores_id') ?></th>
 						<th><?= $this->Paginator->sort('indices_id') ?></th>
 						<th>Editar</th>
 						<th>Deletar</th>
@@ -22,7 +21,6 @@
 					<tr>
 						<td><?= $this->Number->format($hino->id) ?></td>
 						<td><?= $hino->name ?></td>
-						<td><?= $hino->has('autore') ? $this->Html->link($hino->autore->name, ['controller' => 'Autores', 'action' => 'view', $hino->autore->id]) : '' ?></td>
 						<td><?= $hino->has('index') ? $this->Html->link($hino->index->name, ['controller' => 'Indices', 'action' => 'view', $hino->index->id]) : '' ?></td>
 						<td><?= $this->Html->link('Editar', ['action' => 'edit', $hino->id]) ?></td>
 						<td><?= $this->Form->postLink('Deletar', 
