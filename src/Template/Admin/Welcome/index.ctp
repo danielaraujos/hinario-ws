@@ -25,7 +25,7 @@
                 <div class="inner">
                     <h3><?php echo $dados['indices'];?></h3>
 
-                    <p>Indices</p>
+                    <p>Indices cadastrados</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-stats-bars"></i>

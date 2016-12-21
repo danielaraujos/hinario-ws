@@ -27,7 +27,7 @@ $this->layout = false;
 
 <div class="login-box">
     <div class="login-logo">
-        <b></b>
+        <b>Administração</b>
     </div><!-- /.login-logo -->
     <div class="login-box-body">
         <p class="login-box-msg">Por favor, realize o login</p>
