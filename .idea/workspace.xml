@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b259b085-f701-4dce-960d-ac669a2b3a5f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Template/Admin/Indices/view.ctp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/AdminTheme/src/Template/Element/header.ctp" afterPath="$PROJECT_DIR$/plugins/AdminTheme/src/Template/Element/header.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Admin/IndicesController.php" afterPath="$PROJECT_DIR$/src/Controller/Admin/IndicesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Admin/WelcomeController.php" afterPath="$PROJECT_DIR$/src/Controller/Admin/WelcomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Admin/Hinos/index.ctp" afterPath="$PROJECT_DIR$/src/Template/Admin/Hinos/index.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Admin/Indices/index.ctp" afterPath="$PROJECT_DIR$/src/Template/Admin/Indices/index.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Admin/Hinos/add.ctp" afterPath="$PROJECT_DIR$/src/Template/Admin/Hinos/add.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Admin/Hinos/edit.ctp" afterPath="$PROJECT_DIR$/src/Template/Admin/Hinos/edit.ctp" />
     </list>
     <ignored path="hinario.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WelcomeController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WelcomeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/Admin/WelcomeController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -102,24 +98,19 @@
       <file leaf-file-name="add.ctp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Template/Admin/Hinos/add.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            <state relative-caret-position="210">
+              <caret line="14" column="134" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header-right.ctp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/AdminTheme/src/Template/Element/header-right.ctp">
+      <file leaf-file-name="edit.ctp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Template/Admin/Hinos/edit.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="198" column="20" lean-forward="false" selection-start-line="198" selection-start-column="20" selection-end-line="198" selection-end-column="20" />
-              <folding>
-                <element signature="e#9734#9740#0" expanded="true" />
-                <element signature="e#9740#9746#0" expanded="true" />
-                <element signature="e#9776#9782#0" expanded="true" />
-                <element signature="e#9782#9788#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,8 +155,6 @@
         <option value="$PROJECT_DIR$/src/Controller/AppController.php" />
         <option value="$PROJECT_DIR$/src/Model/Table/HinosTable.php" />
         <option value="$PROJECT_DIR$/config/routes.php" />
-        <option value="$PROJECT_DIR$/src/Template/Admin/Hinos/add.ctp" />
-        <option value="$PROJECT_DIR$/src/Template/Admin/Hinos/edit.ctp" />
         <option value="$PROJECT_DIR$/src/Template/Admin/Cifras/add.ctp" />
         <option value="$PROJECT_DIR$/src/Template/Admin/Cifras/edit.ctp" />
         <option value="$PROJECT_DIR$/src/Controller/Admin/CifrasController.php" />
@@ -190,6 +179,8 @@
         <option value="$PROJECT_DIR$/src/Controller/Admin/IndicesController.php" />
         <option value="$PROJECT_DIR$/plugins/AdminTheme/src/Template/Element/header.ctp" />
         <option value="$PROJECT_DIR$/src/Controller/Admin/WelcomeController.php" />
+        <option value="$PROJECT_DIR$/src/Template/Admin/Hinos/add.ctp" />
+        <option value="$PROJECT_DIR$/src/Template/Admin/Hinos/edit.ctp" />
       </list>
     </option>
   </component>
@@ -754,7 +745,7 @@
       <workItem from="1478654627735" duration="27000" />
       <workItem from="1481242677965" duration="777000" />
       <workItem from="1481306033231" duration="17000" />
-      <workItem from="1482333611006" duration="3320000" />
+      <workItem from="1482333611006" duration="3494000" />
     </task>
     <task id="LOCAL-00001" summary="Retirando a função de autores">
       <created>1473300266084</created>
@@ -791,11 +782,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482336340687</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Atualizações">
+      <created>1482337011557</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1482337011557</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22788000" />
+    <option name="totallyTimeSpent" value="22962000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="719" extended-state="6" />
@@ -841,7 +839,8 @@
     <MESSAGE value="Atualizando Cake e comencando a atualizar o webservice" />
     <MESSAGE value="Arrumando foto de perfil" />
     <MESSAGE value="Migrations and seeds&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migrations and seeds&#10;" />
+    <MESSAGE value="Atualizações" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualizações" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -927,13 +926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-32">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Hinos/edit.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1326,14 +1318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Hinos/add.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Admin/Hinos/index.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1386,6 +1370,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Hinos/add.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="134" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Hinos/edit.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding />
         </state>
       </provider>
