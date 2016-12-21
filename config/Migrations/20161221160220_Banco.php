@@ -1,7 +1,7 @@
 <?php
 use Migrations\AbstractMigration;
 
-class Bd extends AbstractMigration
+class Banco extends AbstractMigration
 {
     public function up()
     {
@@ -40,6 +40,11 @@ class Bd extends AbstractMigration
                 'limit' => null,
                 'null' => false,
             ])
+            ->addColumn('audio', 'string', [
+                'default' => null,
+                'limit' => 200,
+                'null' => false,
+            ])
             ->addColumn('indices_id', 'integer', [
                 'default' => null,
                 'limit' => 11,
@@ -74,6 +79,16 @@ class Bd extends AbstractMigration
             ->addColumn('email', 'string', [
                 'default' => null,
                 'limit' => 100,
+                'null' => false,
+            ])
+            ->addColumn('image', 'string', [
+                'default' => null,
+                'limit' => 150,
+                'null' => false,
+            ])
+            ->addColumn('dir', 'string', [
+                'default' => null,
+                'limit' => 150,
                 'null' => false,
             ])
             ->create();
