@@ -42,6 +42,11 @@ use Cake\Routing\Router;
  */
 Router::defaultRouteClass('DashedRoute');
 
+Router::scope('/', function (RouteBuilder $routes) {
+    $routes->connect('/', ['controller' => 'Inicial', 'action' => 'index']);
+    $routes->fallbacks('DashedRoute');
+});
+
 Router::scope('/api/v1', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'index']);
     $routes->extensions(['Json']);
@@ -50,6 +55,7 @@ Router::scope('/api/v1', function (RouteBuilder $routes) {
 
     $routes->fallbacks('DashedRoute');
 });
+
 
 Router::prefix('admin', function ($routes){
     $routes->connect('/', ['controller' => 'Welcome', 'action' => 'index']);
