@@ -63,9 +63,9 @@ class AppController extends Controller
 
         if ($prefix == 'admin') {
             $this->viewBuilder()->theme('AdminTheme');
+            $this->set('user_auth', $this->Auth->user());
         }
 
-        $this->set('user_auth', $this->Auth->user());
 
         // Esta linha abaixo resolve o problema do acesso ao app
         $this->response->header('Access-Control-Allow-Origin', '*');
