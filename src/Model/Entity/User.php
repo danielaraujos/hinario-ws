@@ -29,6 +29,23 @@ class User extends Entity
         'id' => false
     ];
 
+    protected function _getDir() {
+        return "uploads/users/";
+    }
+
+    protected function _getImageLink() {
+        if(isset($this->_properties['id']) && strlen($this->_properties['image']) > 1) {
+            return $this->_properties['dir'] . $this->_properties['image'];
+        }
+        return 'avatar.png';
+    }
+    protected function _getThumbnailLink() {
+        if(isset($this->_properties['id']) && strlen($this->_properties['image']) > 1) {
+            return $this->_properties['dir'] . 'thumbnail-' . $this->_properties['image'];
+        }
+        return 'avatar.png';
+    }
+
 
     protected function _setPassword($password)
     {

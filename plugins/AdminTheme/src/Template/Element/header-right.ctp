@@ -198,14 +198,14 @@
 
             <ul class="dropdown-menu">
                 <li class="user-header">
-                    <? echo $this->Html->image("user2-160x160.jpg", [
+                    <?php echo $this->Html->image("avatar.png", [
                             "class" => "img-circle",
                             "alt" => "User Image"
                         ]
                     ); ?>
                     <p>
                         <?= $user_auth['name'] ?> <? //$logged['lastname'] ?>
-                        <?php echo '<small>Membro desde Nov. 2012</small>' ?>
+                        <?php echo '<small>Seja bem vindo ao painel!</small>' ?>
                     </p>
                 </li>
 
@@ -233,7 +233,7 @@
                         <?= $this->Html->link(
                             __('Perfil'), [
                             'controller' => 'Users',
-                            'action' => 'perfil'
+                            'action' => 'perfil',$user_auth['id']
                         ],
                             [ 'class' => "btn btn-default btn-flat" ]
                         ) ?>
