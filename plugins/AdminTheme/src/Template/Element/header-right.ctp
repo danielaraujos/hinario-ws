@@ -192,17 +192,33 @@
         <!-- User Account: style can be found in dropdown.less -->
         <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <?php //<img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image"> ?>
-                <span><?= $user_auth['name'] ?><i class="fa fa-angle-down"></i> </span>
+                <?php
+                if($user_auth['image'] != null){
+                    echo $this->Html->Image($user_auth['dir'].'/'.$user_auth['image'],['class'=>"user-image"]);
+                }else{
+                    echo $this->Html->Image('avatar.png',['class'=>"user-image"]);
+                }
+                ?>
+
+                <span><?php echo  $user_auth['name'] ?>&nbsp;&nbsp;</span>
+                <span>&nbsp;&nbsp;<i class="fa fa-angle-down"></i></span>
             </a>
 
             <ul class="dropdown-menu">
                 <li class="user-header">
-                    <?php echo $this->Html->image("avatar.png", [
+                    <?php if($user_auth['image'] != null){
+                        echo $this->Html->image($user_auth['dir'].'/'.$user_auth['image'], [
                             "class" => "img-circle",
                             "alt" => "User Image"
-                        ]
-                    ); ?>
+                        ]);
+                    }else{
+                        echo $this->Html->image("avatar.png", [
+                            "class" => "img-circle",
+                            "alt" => "User Image"
+                        ]);
+
+                    }?>
+                    <?php  ?>
                     <p>
                         <?= $user_auth['name'] ?> <? //$logged['lastname'] ?>
                         <?php echo '<small>Seja bem vindo ao painel!</small>' ?>

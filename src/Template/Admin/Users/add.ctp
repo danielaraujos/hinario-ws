@@ -2,44 +2,43 @@
     <div class="box-header with-border">
         <h3 class="box-title"> <?= $subtitle ?> </h3>
     </div>
-	
-    <?= $this->Form->create($user) ?>
-        <div class="box-body">
 
-            <div class="form-group">
-                <?= $this->Form->input('name', ['class' => 'form-control', 'placeholder' => 'Digite seu nome']) ?>
-            </div>
-            <div class="form-group">
-                <?= $this->Form->input('email', ['class' => 'form-control', 'placeholder' => 'Digite seu emaill']) ?>
-            </div>
-			<div class="form-group">
-				<?= $this->Form->input('username', ['class' => 'form-control', 'placeholder' => 'Digite seu usuario']) ?>
-			</div>
-			<div class="form-group">
-				<?= $this->Form->input('password', ['class' => 'form-control', 'placeholder' => 'Digite sua senha']) ?>
-			</div>
+    <?= $this->Form->create($user, ['type' => 'file']) ?>
+    <div class="box-body">
 
+        <div class="form-group">
+            <?= $this->Form->input('name', ['label'=>'Nome','class' => 'form-control', 'placeholder' => 'Digite seu nome']) ?>
+        </div>
+        <div class="form-group">
+            <?= $this->Form->input('email', ['label'=>'E-mail','class' => 'form-control', 'placeholder' => 'Digite seu emaill']) ?>
+        </div>
+        <div class="form-group">
+            <?= $this->Form->input('username', ['label'=>'Usuário','class' => 'form-control', 'placeholder' => 'Digite seu usuario']) ?>
+        </div>
+        <div class="form-group">
+            <?= $this->Form->input('password', ['label'=>'Senha','class' => 'form-control', 'placeholder' => 'Digite sua senha']) ?>
+        </div>
 
-            <div class="form-group">
-                <?= $this->Form->input(
-                'image', [
-                'class' => 'form-control',
-                'label' => 'Foto de Perfil (Tamanho recomendado: 160x160)',
-                'type' => 'file',
-                'onChange' => "$('#imagePreview')[0].src = window.URL.createObjectURL(this.files[0])"
-                ]
-                );?>
-            </div>
-            <div class="form-group">
-                <label>Pré-visualizar: </label><br>
-                <?php
+        <div class="form-group">
+            <?= $this->Form->input(
+            'image', [
+            'class' => 'form-control',
+            'label' => 'Foto de Perfil (Tamanho recomendado: 160x160)',
+            'type' => 'file',
+            'onChange' => "$('#imagePreview')[0].src = window.URL.createObjectURL(this.files[0])"
+            ]
+            );?>
+        </div>
+        <div class="form-group">
+            <label>Pré-visualizar: </label><br>
+            <?php
 			echo $this->Html->Image( $user->thumbnailLink, [
-                'id' => 'imagePreview',
-                'style' => 'max-width: 350px; max-height: 350px',
-                'alt' => 'Imagem para Banner'
-                ] );
-                ?>
-            </div>
+            'id' => 'imagePreview',
+            'style' => 'max-width: 350px; max-height: 350px',
+            'alt' => 'Imagem para Banner'
+            ] );
+            ?>
+        </div>
 
     </div><!-- /.box-body -->
     <div class="box-footer">
