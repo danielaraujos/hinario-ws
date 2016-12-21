@@ -54,8 +54,8 @@
 $(function () {
 $('#example1').DataTable({
 "paging": false,
-"lengthChange": false,
-"searching": true,
+"lengthChange": true,
+"searching": false,
 "ordering": true,
 "info": false,
 "autoWidth": false

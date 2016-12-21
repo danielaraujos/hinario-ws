@@ -49,13 +49,13 @@
 
 <?= $this->Html->scriptStart(['block' => "scriptBottom"]); ?>
 $(function () {
-	$('#example2').DataTable({
-		"paging": false,
-		"lengthChange": false,
-		"searching": false,
-		"ordering": true,
-		"info": true,
-		"autoWidth": false
-	});
+$('#example1').DataTable({
+"paging": false,
+"lengthChange": false,
+"searching": true,
+"ordering": true,
+"info": false,
+"autoWidth": false
+});
 });
 <?= $this->Html->scriptEnd(); ?>
