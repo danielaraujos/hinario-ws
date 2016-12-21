@@ -9,10 +9,9 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
 					<tr>
-						<th><?= $this->Paginator->sort('id') ?></th>
-						<th><?= $this->Paginator->sort('name') ?></th>
-						<th>Editar</th>
-						<th>Deletar</th>
+						<th>ID</th>
+						<th>Nome</th>
+						<th>Ações</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -20,10 +19,11 @@
 					<tr>
 						<td><?= $this->Number->format($index->id) ?></td>
 						<td><?= $index->name ?></td>
-						<td><?= $this->Html->link('Editar', ['action' => 'edit', $index->id]) ?></td>
-						<td><?= $this->Form->postLink('Deletar', 
-							['action' => 'delete', $index->id], 
-							['confirm' => __('Tem certeza que deseja deletar o(a) index {0}?', $index->id)]) ?>
+						<td>
+							<?= $this->Html->link('Editar', ['action' => 'edit', $index->id],['class'=> 'btn btn-primary btn-sm']) ?>
+							<?= $this->Form->postLink('Deletar',
+							['action' => 'delete', $index->id],
+							['confirm' => __('Tem certeza que deseja deletar o(a) indice {0}?', $index->id),'class'=> 'btn btn-danger btn-sm']) ?>
 						</td>
 					</tr>
                 <?php endforeach; ?>

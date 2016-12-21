@@ -6,7 +6,7 @@ use App\Controller\AppController;
 class WelcomeController extends AppController
 {
     public function index(){
-        $this->set('title', 'Welcome');
+        $this->set('title', 'Bem vindo');
         $this->set('subtitle', '');
 
     }

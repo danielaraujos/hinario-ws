@@ -9,9 +9,9 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
 					<tr>
-						<th><?= $this->Paginator->sort('id') ?></th>
-						<th><?= $this->Paginator->sort('name') ?></th>
-						<th><?= $this->Paginator->sort('indices_id') ?></th>
+						<th>ID</th>
+						<th>Nome</th>
+						<th>Indices</th>
 						<th>Ações</th>
 					</tr>
 				</thead>
@@ -21,7 +21,7 @@
 						<td><?= $this->Number->format($hino->id) ?></td>
 						<td><?= $hino->name ?></td>
 						<td><?= $hino->has('index') ? $this->Html->link($hino->index->name, ['controller' => 'Indices', 'action' => 'view', $hino->index->id]) : '' ?></td>
-						<td></td>
+
 						<td>
 							<?= $this->Html->link('Editar', ['action' => 'edit', $hino->id],['class'=> 'btn btn-primary btn-sm']) ?>
 							<?= $this->Form->postLink('Deletar',
@@ -52,13 +52,13 @@
 
 <?= $this->Html->scriptStart(['block' => "scriptBottom"]); ?>
 $(function () {
-	$('#example2').DataTable({
-		"paging": false,
-		"lengthChange": false,
-		"searching": false,
-		"ordering": true,
-		"info": true,
-		"autoWidth": false
-	});
+$('#example1').DataTable({
+"paging": false,
+"lengthChange": false,
+"searching": true,
+"ordering": true,
+"info": false,
+"autoWidth": false
+});
 });
 <?= $this->Html->scriptEnd(); ?>

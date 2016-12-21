@@ -27,22 +27,6 @@ class IndicesController extends AppController
         $this->set('_serialize', ['indices']);
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id Index id.
-     * @return \Cake\Network\Response|null
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $index = $this->Indices->get($id, [
-            'contain' => []
-        ]);
-
-        $this->set('index', $index);
-        $this->set('_serialize', ['index']);
-    }
 
     /**
      * Add method
