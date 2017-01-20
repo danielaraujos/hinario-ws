@@ -28,8 +28,11 @@ class HinosController extends AppController
         $this->request->allowMethod(['get']);
         //$hinos = $this->request->data();
 
-        $this->paginate = ['limit'=>500];
-        $hinos = $this->paginate($this->Hinos);
+        //$this->paginate = ['limit'=>500];
+        //$hinos = $this->paginate($this->Hinos);
+
+        $hinos = $this->Hinos->find()->all();
+
 
         $this->set(compact('hinos'));
         $this->set('_serialize', ['hinos']);
