@@ -30,6 +30,7 @@ class IndicesController extends AppController
         $this->request->allowMethod(['get']);
         $indices = $this->paginate($this->Indices);
 
+
         $this->set(compact('indices'));
         $this->set('_serialize', ['indices']);
     }

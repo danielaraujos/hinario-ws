@@ -34,6 +34,7 @@ class HinosController extends AppController
         $hinos = $this->Hinos->find()->all();
 
 
+
         $this->set(compact('hinos'));
         $this->set('_serialize', ['hinos']);
     }
